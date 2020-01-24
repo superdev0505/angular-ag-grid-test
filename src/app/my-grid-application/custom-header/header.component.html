@@ -1,0 +1,7 @@
+<div>
+  <div [hidden]="params.checkbox" >{{params.displayName}}</div>
+  <div [hidden]="!params.checkbox" class="custom-checkbox custom-control ag-custom-checkbox-header">
+    <input id="header_checkbox" type="checkbox" class="custom-control-input" [(ngModel)]="selected" (change)="menuSelectClick()">
+    <label for="header_checkbox" class="custom-control-label"></label>
+  </div>
+</div>

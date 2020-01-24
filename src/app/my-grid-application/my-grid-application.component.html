@@ -1,0 +1,31 @@
+<div class="status-bar">
+	<div class="record-count">
+		<span class="label">Total rows &nbsp;</span>
+		<span class="total-count">{{recordCount}}</span>
+	</div>
+	<div class="select-row-count">
+		<span class="label">Selected &nbsp;</span>
+		<span class="total-count">{{selectedCount}}</span>
+	</div>
+</div>
+<ag-grid-angular 
+	#asGrid
+  style="width: auto; height: 560px;" 
+  id="myGrid"
+  class="ag-theme-balham"
+  [columnDefs]="columnDefs"
+  [defaultColDef]="defaultColDef"
+  [allowContextMenuWithControlKey]="true"
+  [rowMultiSelectWithClick]="true"
+  [getContextMenuItems]="getContextMenuItems"
+  [rowModelType]="rowModelType"
+  [overlayLoadingTemplate]="overlayLoadingTemplate"
+  [frameworkComponents]="frameworkComponents"
+  [rowData]="rowData"
+  [animateRows]="true"
+  [getRowHeight]="getRowHeight"
+  rowSelection="multiple"
+  (gridReady)="onGridReady($event)"
+  (rowSelected)="onRowSelected($event)"
+  >
+</ag-grid-angular>
